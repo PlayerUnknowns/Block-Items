@@ -1,0 +1,9 @@
+	int ItemeBlocate[] = {19, 29, 39};
+	int Mape[] = {110, 113, 250};
+	
+	for (int i = 0; i < _countof(ItemeBlocate); i++){
+		if (item->GetVnum() == ItemeBlocate[i] && GetMapIndex() == Mape[i]){
+			ChatPacket(CHAT_TYPE_INFO, "<Block Items> Nu poti foloi [%s] in aceasta mapa! ", item->GetName());
+			return false;
+		}
+	}
